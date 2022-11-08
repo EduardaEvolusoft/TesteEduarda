@@ -1,0 +1,19 @@
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <mat-form-field>
+        <input
+        matInput
+        placeholder="Tipo de perfil de usuario"
+          type="text"
+          id="tipo"
+          required
+          [(ngModel)]="perfilUsuario.tipo"
+          name="tipo"
+        />
+      </mat-form-field>
+
+      <button (click)="savePerfilUsuario()" class="btn btn-success">Submit</button>
+    </div>
+  </div>
+</div>

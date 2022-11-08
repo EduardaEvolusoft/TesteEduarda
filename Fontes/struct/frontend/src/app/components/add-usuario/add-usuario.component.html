@@ -1,0 +1,43 @@
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <mat-form-field>
+        <input
+        matInput
+        placeholder="Nome do Usuario"
+          type="text"
+          id="nome"
+          required
+          [(ngModel)]="usuario.nome"
+          name="nome"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+        matInput
+        placeholder="Senha"
+          type="text"
+          id="senha"
+          required
+          [(ngModel)]="usuario.senha"
+          name="senha"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+        matInput
+        placeholder="Email"
+          type="text"
+          id="email"
+          required
+          [(ngModel)]="usuario.email"
+          name="email"
+        />
+      </mat-form-field>
+
+      <button (click)="saveUsuario()" class="btn btn-success">Confirma</button>
+    </div>
+  </div>
+</div>

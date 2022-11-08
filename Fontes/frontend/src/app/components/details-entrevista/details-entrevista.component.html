@@ -1,0 +1,109 @@
+  <div>
+    <div *ngIf="entrevista.id" class="edit-form">
+      <h4>Entrevista</h4>
+      <form>
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nome"
+          required
+          [(ngModel)]="entrevista.nome"
+          name="nome"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="dataHora">DataHora</label>
+        <input
+          type="text"
+          class="form-control"
+          id="dataHora"
+          required
+          [(ngModel)]="entrevista.dataHora"
+          name="dataHora"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="sequencia">Sequencia</label>
+        <input
+          type="text"
+          class="form-control"
+          id="sequencia"
+          required
+          [(ngModel)]="entrevista.sequencia"
+          name="sequencia"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="entrevistador">Entrevistador</label>
+        <input
+          type="text"
+          class="form-control"
+          id="entrevistador"
+          required
+          [(ngModel)]="entrevista.entrevistador"
+          name="entrevistador"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="entrevistado">Entrevistado</label>
+        <input
+          type="text"
+          class="form-control"
+          id="entrevistado"
+          required
+          [(ngModel)]="entrevista.entrevistado"
+          name="entrevistado"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="enquete">Enquete</label>
+        <input
+          type="text"
+          class="form-control"
+          id="enquete"
+          required
+          [(ngModel)]="entrevista.enquete"
+          name="enquete"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="resposta">Resposta</label>
+        <input
+          type="text"
+          class="form-control"
+          id="resposta"
+          required
+          [(ngModel)]="entrevista.resposta"
+          name="resposta"
+        />
+      </div>
+
+      </form>
+
+      <button class="badge badge-danger mr-2" (click)="deleteEntrevista()">
+        Excluir
+      </button>
+
+      <button
+        type="submit"
+        class="badge badge-success mb-2"
+        (click)="updateEntrevista()"
+      >
+        Gravar
+      </button>
+      <p>{{ message }}</p>
+    </div>
+
+    <div *ngIf="!entrevista.id">
+      <br />
+      <p>Não foi possível carregar essa entidade de Entrevista...</p>
+    </div>
+  </div>

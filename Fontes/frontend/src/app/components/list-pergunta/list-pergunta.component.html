@@ -1,0 +1,70 @@
+<div class="list row">
+    <div class="col-md-8">
+        <div class="input-group mb-3">
+            <input
+                type="text"
+                class="form-control"
+                placeholder="Procurar por CodigoPergunta"
+                [(ngModel)]="codigoPergunta"
+            />
+            <div class="input-group-append">
+                <button
+                    class="btn btn-outline-secondary"
+                    type="button"
+                    (click)="searchCodigoPergunta()"
+                >
+                    Procurar
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <h4>Lista de Perguntas</h4>
+        <ul class="list-group">
+        <li
+            class="list-group-item"
+            *ngFor="let pergunta of perguntaCollection; let i = index"
+            [class.active]="i == currentIndex"
+            (click)="setActivePergunta(pergunta, i)"
+        >
+            {{ pergunta.codigoPergunta }} {{ pergunta.sequenciaFormulario }} {{ pergunta.frase }} {{ pergunta.textoExplicativo }} {{ pergunta.tipoResposta }} {{ pergunta.obrigatoria }} 
+        </li>
+        </ul>
+
+        <button class="m-3 btn btn-sm btn-danger" (click)="removeAllPerguntas()">
+        Remover Tudo
+        </button>
+    </div>
+    <div class="col-md-6">
+        <div *ngIf="currentPergunta.id">
+        <h4>Pergunta</h4>
+        <div>
+            <label><strong>CodigoPergunta:</strong></label> {{ currentPergunta.codigoPergunta }}
+        </div>
+        <div>
+            <label><strong>SequenciaFormulario:</strong></label> {{ currentPergunta.sequenciaFormulario }}
+        </div>
+        <div>
+            <label><strong>Frase:</strong></label> {{ currentPergunta.frase }}
+        </div>
+        <div>
+            <label><strong>TextoExplicativo:</strong></label> {{ currentPergunta.textoExplicativo }}
+        </div>
+        <div>
+            <label><strong>TipoResposta:</strong></label> {{ currentPergunta.tipoResposta }}
+        </div>
+        <div>
+            <label><strong>Obrigatoria:</strong></label> {{ currentPergunta.obrigatoria }}
+        </div>
+
+        <a class="badge badge-warning" routerLink="/perguntas/{{ currentPergunta.id }}">
+            Editar
+        </a>
+        </div>
+
+        <div *ngIf="!currentPergunta">
+        <br />
+        <p>Por favor selecione uma linha da lista de Pergunta...</p>
+        </div>
+    </div>
+</div>

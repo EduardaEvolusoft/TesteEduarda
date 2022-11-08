@@ -1,0 +1,133 @@
+  <div>
+    <div *ngIf="enquete.id" class="edit-form">
+      <h4>Enquete</h4>
+      <form>
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nome"
+          required
+          [(ngModel)]="enquete.nome"
+          name="nome"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="ativa">Ativa</label>
+        <input
+          type="text"
+          class="form-control"
+          id="ativa"
+          required
+          [(ngModel)]="enquete.ativa"
+          name="ativa"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="dataHoraInicio">DataHoraInicio</label>
+        <input
+          type="text"
+          class="form-control"
+          id="dataHoraInicio"
+          required
+          [(ngModel)]="enquete.dataHoraInicio"
+          name="dataHoraInicio"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="dataHoraFinal">DataHoraFinal</label>
+        <input
+          type="text"
+          class="form-control"
+          id="dataHoraFinal"
+          required
+          [(ngModel)]="enquete.dataHoraFinal"
+          name="dataHoraFinal"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="pergunta">Pergunta</label>
+        <input
+          type="text"
+          class="form-control"
+          id="pergunta"
+          required
+          [(ngModel)]="enquete.pergunta"
+          name="pergunta"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="entrevistadorInsereResposta">EntrevistadorInsereResposta</label>
+        <input
+          type="text"
+          class="form-control"
+          id="entrevistadorInsereResposta"
+          required
+          [(ngModel)]="enquete.entrevistadorInsereResposta"
+          name="entrevistadorInsereResposta"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="entrevistadoInsereResposta">EntrevistadoInsereResposta</label>
+        <input
+          type="text"
+          class="form-control"
+          id="entrevistadoInsereResposta"
+          required
+          [(ngModel)]="enquete.entrevistadoInsereResposta"
+          name="entrevistadoInsereResposta"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="entrevistadorAutorizado">EntrevistadorAutorizado</label>
+        <input
+          type="text"
+          class="form-control"
+          id="entrevistadorAutorizado"
+          required
+          [(ngModel)]="enquete.entrevistadorAutorizado"
+          name="entrevistadorAutorizado"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="entrevistadoAutorizado">EntrevistadoAutorizado</label>
+        <input
+          type="text"
+          class="form-control"
+          id="entrevistadoAutorizado"
+          required
+          [(ngModel)]="enquete.entrevistadoAutorizado"
+          name="entrevistadoAutorizado"
+        />
+      </div>
+
+      </form>
+
+      <button class="badge badge-danger mr-2" (click)="deleteEnquete()">
+        Excluir
+      </button>
+
+      <button
+        type="submit"
+        class="badge badge-success mb-2"
+        (click)="updateEnquete()"
+      >
+        Gravar
+      </button>
+      <p>{{ message }}</p>
+    </div>
+
+    <div *ngIf="!enquete.id">
+      <br />
+      <p>Não foi possível carregar essa entidade de Enquete...</p>
+    </div>
+  </div>

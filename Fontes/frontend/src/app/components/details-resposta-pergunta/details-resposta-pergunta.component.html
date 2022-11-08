@@ -1,0 +1,49 @@
+  <div>
+    <div *ngIf="respostaPergunta.id" class="edit-form">
+      <h4>RespostaPergunta</h4>
+      <form>
+      <div class="form-group">
+        <label for="resposta">Resposta</label>
+        <input
+          type="text"
+          class="form-control"
+          id="resposta"
+          required
+          [(ngModel)]="respostaPergunta.resposta"
+          name="resposta"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="pergunta">Pergunta</label>
+        <input
+          type="text"
+          class="form-control"
+          id="pergunta"
+          required
+          [(ngModel)]="respostaPergunta.pergunta"
+          name="pergunta"
+        />
+      </div>
+
+      </form>
+
+      <button class="badge badge-danger mr-2" (click)="deleteRespostaPergunta()">
+        Excluir
+      </button>
+
+      <button
+        type="submit"
+        class="badge badge-success mb-2"
+        (click)="updateRespostaPergunta()"
+      >
+        Gravar
+      </button>
+      <p>{{ message }}</p>
+    </div>
+
+    <div *ngIf="!respostaPergunta.id">
+      <br />
+      <p>Não foi possível carregar essa entidade de RespostaPergunta...</p>
+    </div>
+  </div>

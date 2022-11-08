@@ -1,0 +1,43 @@
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <mat-form-field>
+        <input
+        matInput
+        placeholder="Nome"
+          type="text"
+          id="nome"
+          required
+          [(ngModel)]="entrevista.nome"
+          name="nome"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+        matInput
+        placeholder="DataHora"
+          type="text"
+          id="dataHora"
+          required
+          [(ngModel)]="entrevista.dataHora"
+          name="dataHora"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+        matInput
+        placeholder="Sequencia"
+          type="text"
+          id="sequencia"
+          required
+          [(ngModel)]="entrevista.sequencia"
+          name="sequencia"
+        />
+      </mat-form-field>
+
+      <button (click)="saveEntrevista()" class="btn btn-success">Submit</button>
+    </div>
+  </div>
+</div>

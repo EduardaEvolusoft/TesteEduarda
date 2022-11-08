@@ -1,0 +1,79 @@
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <mat-form-field>
+        <input
+        matInput
+        placeholder="Nome"
+          type="text"
+          id="nome"
+          required
+          [(ngModel)]="enquete.nome"
+          name="nome"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+        matInput
+        placeholder="Ativa"
+          type="text"
+          id="ativa"
+          required
+          [(ngModel)]="enquete.ativa"
+          name="ativa"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+        matInput
+        placeholder="DataHoraInicio"
+          type="text"
+          id="dataHoraInicio"
+          required
+          [(ngModel)]="enquete.dataHoraInicio"
+          name="dataHoraInicio"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+        matInput
+        placeholder="DataHoraFinal"
+          type="text"
+          id="dataHoraFinal"
+          required
+          [(ngModel)]="enquete.dataHoraFinal"
+          name="dataHoraFinal"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+        matInput
+        placeholder="EntrevistadorInsereResposta"
+          type="text"
+          id="entrevistadorInsereResposta"
+          required
+          [(ngModel)]="enquete.entrevistadorInsereResposta"
+          name="entrevistadorInsereResposta"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+        matInput
+        placeholder="EntrevistadoInsereResposta"
+          type="text"
+          id="entrevistadoInsereResposta"
+          required
+          [(ngModel)]="enquete.entrevistadoInsereResposta"
+          name="entrevistadoInsereResposta"
+        />
+      </mat-form-field>
+
+      <button (click)="saveEnquete()" class="btn btn-success">Submit</button>
+    </div>
+  </div>
+</div>

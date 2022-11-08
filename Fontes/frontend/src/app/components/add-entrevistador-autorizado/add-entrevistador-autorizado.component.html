@@ -1,0 +1,19 @@
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <mat-form-field>
+        <input
+        matInput
+        placeholder="TipoPermissao"
+          type="text"
+          id="tipoPermissao"
+          required
+          [(ngModel)]="entrevistadorAutorizado.tipoPermissao"
+          name="tipoPermissao"
+        />
+      </mat-form-field>
+
+      <button (click)="saveEntrevistadorAutorizado()" class="btn btn-success">Submit</button>
+    </div>
+  </div>
+</div>

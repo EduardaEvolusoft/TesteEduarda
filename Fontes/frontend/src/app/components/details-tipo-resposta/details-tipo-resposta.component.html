@@ -1,0 +1,37 @@
+  <div>
+    <div *ngIf="tipoResposta.id" class="edit-form">
+      <h4>TipoResposta</h4>
+      <form>
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nome"
+          required
+          [(ngModel)]="tipoResposta.nome"
+          name="nome"
+        />
+      </div>
+
+      </form>
+
+      <button class="badge badge-danger mr-2" (click)="deleteTipoResposta()">
+        Excluir
+      </button>
+
+      <button
+        type="submit"
+        class="badge badge-success mb-2"
+        (click)="updateTipoResposta()"
+      >
+        Gravar
+      </button>
+      <p>{{ message }}</p>
+    </div>
+
+    <div *ngIf="!tipoResposta.id">
+      <br />
+      <p>Não foi possível carregar essa entidade de TipoResposta...</p>
+    </div>
+  </div>

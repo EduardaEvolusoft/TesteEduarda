@@ -1,0 +1,36 @@
+<div class="list row">
+    <div class="col-md-6">
+        <h4>Lista de TiposRespostas</h4>
+        <ul class="list-group">
+        <li
+            class="list-group-item"
+            *ngFor="let tipoResposta of tipoRespostaCollection; let i = index"
+            [class.active]="i == currentIndex"
+            (click)="setActiveTipoResposta(tipoResposta, i)"
+        >
+            {{ tipoResposta.nome }} 
+        </li>
+        </ul>
+
+        <button class="m-3 btn btn-sm btn-danger" (click)="removeAllTiposRespostas()">
+        Remover Tudo
+        </button>
+    </div>
+    <div class="col-md-6">
+        <div *ngIf="currentTipoResposta.id">
+        <h4>TipoResposta</h4>
+        <div>
+            <label><strong>Nome:</strong></label> {{ currentTipoResposta.nome }}
+        </div>
+
+        <a class="badge badge-warning" routerLink="/tipos-respostas/{{ currentTipoResposta.id }}">
+            Editar
+        </a>
+        </div>
+
+        <div *ngIf="!currentTipoResposta">
+        <br />
+        <p>Por favor selecione uma linha da lista de TipoResposta...</p>
+        </div>
+    </div>
+</div>

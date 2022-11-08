@@ -1,0 +1,97 @@
+  <div>
+    <div *ngIf="pergunta.id" class="edit-form">
+      <h4>Pergunta</h4>
+      <form>
+      <div class="form-group">
+        <label for="codigoPergunta">Nome do Usuario</label>
+        <input
+          type="text"
+          class="form-control"
+          id="codigoPergunta"
+          required
+          [(ngModel)]="pergunta.codigoPergunta"
+          name="codigoPergunta"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="sequenciaFormulario">SequenciaFormulario</label>
+        <input
+          type="text"
+          class="form-control"
+          id="sequenciaFormulario"
+          required
+          [(ngModel)]="pergunta.sequenciaFormulario"
+          name="sequenciaFormulario"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="frase">Frase</label>
+        <input
+          type="text"
+          class="form-control"
+          id="frase"
+          required
+          [(ngModel)]="pergunta.frase"
+          name="frase"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="textoExplicativo">TextoExplicativo</label>
+        <input
+          type="text"
+          class="form-control"
+          id="textoExplicativo"
+          required
+          [(ngModel)]="pergunta.textoExplicativo"
+          name="textoExplicativo"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="tipoResposta">TipoResposta</label>
+        <input
+          type="text"
+          class="form-control"
+          id="tipoResposta"
+          required
+          [(ngModel)]="pergunta.tipoResposta"
+          name="tipoResposta"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="obrigatoria">Obrigatoria</label>
+        <input
+          type="text"
+          class="form-control"
+          id="obrigatoria"
+          required
+          [(ngModel)]="pergunta.obrigatoria"
+          name="obrigatoria"
+        />
+      </div>
+
+      </form>
+
+      <button class="badge badge-danger mr-2" (click)="deletePergunta()">
+        Excluir
+      </button>
+
+      <button
+        type="submit"
+        class="badge badge-success mb-2"
+        (click)="updatePergunta()"
+      >
+        Gravar
+      </button>
+      <p>{{ message }}</p>
+    </div>
+
+    <div *ngIf="!pergunta.id">
+      <br />
+      <p>Não foi possível carregar essa entidade de Pergunta...</p>
+    </div>
+  </div>

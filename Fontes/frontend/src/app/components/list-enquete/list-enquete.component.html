@@ -1,0 +1,79 @@
+<div class="list row">
+    <div class="col-md-8">
+        <div class="input-group mb-3">
+            <input
+                type="text"
+                class="form-control"
+                placeholder="Procurar por Nome"
+                [(ngModel)]="nome"
+            />
+            <div class="input-group-append">
+                <button
+                    class="btn btn-outline-secondary"
+                    type="button"
+                    (click)="searchNome()"
+                >
+                    Procurar
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <h4>Lista de Enquetes</h4>
+        <ul class="list-group">
+        <li
+            class="list-group-item"
+            *ngFor="let enquete of enqueteCollection; let i = index"
+            [class.active]="i == currentIndex"
+            (click)="setActiveEnquete(enquete, i)"
+        >
+            {{ enquete.nome }} {{ enquete.ativa }} {{ enquete.dataHoraInicio }} {{ enquete.dataHoraFinal }} {{ enquete.pergunta }} {{ enquete.entrevistadorInsereResposta }} {{ enquete.entrevistadoInsereResposta }} {{ enquete.entrevistadorAutorizado }} {{ enquete.entrevistadoAutorizado }} 
+        </li>
+        </ul>
+
+        <button class="m-3 btn btn-sm btn-danger" (click)="removeAllEnquetes()">
+        Remover Tudo
+        </button>
+    </div>
+    <div class="col-md-6">
+        <div *ngIf="currentEnquete.id">
+        <h4>Enquete</h4>
+        <div>
+            <label><strong>Nome:</strong></label> {{ currentEnquete.nome }}
+        </div>
+        <div>
+            <label><strong>Ativa:</strong></label> {{ currentEnquete.ativa }}
+        </div>
+        <div>
+            <label><strong>DataHoraInicio:</strong></label> {{ currentEnquete.dataHoraInicio }}
+        </div>
+        <div>
+            <label><strong>DataHoraFinal:</strong></label> {{ currentEnquete.dataHoraFinal }}
+        </div>
+        <div>
+            <label><strong>Pergunta:</strong></label> {{ currentEnquete.pergunta }}
+        </div>
+        <div>
+            <label><strong>EntrevistadorInsereResposta:</strong></label> {{ currentEnquete.entrevistadorInsereResposta }}
+        </div>
+        <div>
+            <label><strong>EntrevistadoInsereResposta:</strong></label> {{ currentEnquete.entrevistadoInsereResposta }}
+        </div>
+        <div>
+            <label><strong>EntrevistadorAutorizado:</strong></label> {{ currentEnquete.entrevistadorAutorizado }}
+        </div>
+        <div>
+            <label><strong>EntrevistadoAutorizado:</strong></label> {{ currentEnquete.entrevistadoAutorizado }}
+        </div>
+
+        <a class="badge badge-warning" routerLink="/enquetes/{{ currentEnquete.id }}">
+            Editar
+        </a>
+        </div>
+
+        <div *ngIf="!currentEnquete">
+        <br />
+        <p>Por favor selecione uma linha da lista de Enquete...</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+<mat-sidenav-container class="sidenav-container"> 
+  <mat-sidenav #drawer class="sidenav" fixedInViewport 
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" 
+      [mode]="(isHandset$ | async) ? 'over' : 'side'" 
+      [opened]="(isHandset$ | async) === false"> 
+    <mat-toolbar>Menu</mat-toolbar> 
+ <mat-nav-list>
+      <a mat-list-item routerLink="usuarios" (mouseup)="drawer.toggle()">Usuarios</a> 
+      <a mat-list-item routerLink="perfilsUsuarios" (mouseup)="drawer.toggle()">perfilsUsuarios</a> 
+      <a mat-list-item routerLink="perguntas" (mouseup)="drawer.toggle()">Perguntas</a> 
+      <a mat-list-item routerLink="enquetes" (mouseup)="drawer.toggle()">Enquetes</a> 
+      <a mat-list-item routerLink="entrevistadoresAutorizados" (mouseup)="drawer.toggle()">EntrevistadoresAutorizados</a> 
+      <a mat-list-item routerLink="entrevistadosAutorizados" (mouseup)="drawer.toggle()">EntrevistadosAutorizados</a> 
+      <a mat-list-item routerLink="tiposRespostas" (mouseup)="drawer.toggle()">TiposRespostas</a> 
+      <a mat-list-item routerLink="entrevistas" (mouseup)="drawer.toggle()">Entrevistas</a> 
+      <a mat-list-item routerLink="respostasPerguntas" (mouseup)="drawer.toggle()">RespostasPerguntas</a> 
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+      <mat-toolbar color="primary" class="toolbar">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>TesteEduarda</span>
+    </mat-toolbar>
+    <div class="fix"></div>
+      <router-outlet class="container"></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+ <div class="fix"></div> 
+<mat-toolbar class="toolbarNav">
+  <button mat-flat-button routerLinkActive="active-link" routerLink="">
+    <mat-icon class="material-icons color_blue">
+      home_border</mat-icon>
+  </button>
+    <button mat-button [matMenuTriggerFor]="menu"
+    mat-flat-button routerLinkActive="active-link" ><mat-icon class="addButton" id="mat-icon">add_border
+    </mat-icon></button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="/add/usuario">Usuarios</button>
+  <button mat-menu-item routerLink="/add/perfilUsuario">PerfilsUsuarios</button>
+  <button mat-menu-item routerLink="/add/pergunta">Perguntas</button>
+  <button mat-menu-item routerLink="/add/enquete">Enquetes</button>
+  <button mat-menu-item routerLink="/add/entrevistadorAutorizado">EntrevistadoresAutorizados</button>
+  <button mat-menu-item routerLink="/add/entrevistadoAutorizado">EntrevistadosAutorizados</button>
+  <button mat-menu-item routerLink="/add/tipoResposta">TiposRespostas</button>
+  <button mat-menu-item routerLink="/add/entrevistas"></button>
+  <button mat-menu-item routerLink="/add/respostaPergunta">RespostasPerguntas</button>
+</mat-menu>
+  <button mat-flat-button routerLink="/history" routerLinkActive="active-link">
+    <mat-icon class="material-icons color_blue">assignment_turned_in_border</mat-icon>
+  </button>
+</mat-toolbar>

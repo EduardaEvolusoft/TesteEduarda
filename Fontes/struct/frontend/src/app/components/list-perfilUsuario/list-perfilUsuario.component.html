@@ -1,0 +1,55 @@
+<div class="list row">
+    <div class="col-md-8">
+        <div class="input-group mb-3">
+            <input
+                type="text"
+                class="form-control"
+                placeholder="Procurar por Tipo"
+                [(ngModel)]="tipo"
+            />
+            <div class="input-group-append">
+                <button
+                    class="btn btn-outline-secondary"
+                    type="button"
+                    (click)="searchTipo()"
+                >
+                    Procurar
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <h4>Lista de PerfilsUsuarios</h4>
+        <ul class="list-group">
+        <li
+            class="list-group-item"
+            *ngFor="let perfilUsuario of perfilUsuarioCollection; let i = index"
+            [class.active]="i == currentIndex"
+            (click)="setActivePerfilUsuario(perfilUsuario, i)"
+        >
+            {{ perfilUsuario.tipo }} 
+        </li>
+        </ul>
+
+        <button class="m-3 btn btn-sm btn-danger" (click)="removeAllPerfilsUsuarios()">
+        Remover Tudo
+        </button>
+    </div>
+    <div class="col-md-6">
+        <div *ngIf="currentPerfilUsuario.id">
+        <h4>PerfilUsuario</h4>
+        <div>
+            <label><strong>Tipo:</strong></label> {{ currentPerfilUsuario.tipo }}
+        </div>
+
+        <a class="badge badge-warning" routerLink="/perfils-usuarios/{{ currentPerfilUsuario.id }}">
+            Editar
+        </a>
+        </div>
+
+        <div *ngIf="!currentPerfilUsuario">
+        <br />
+        <p>Por favor selecione uma linha da lista de PerfilUsuario...</p>
+        </div>
+    </div>
+</div>

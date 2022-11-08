@@ -1,0 +1,19 @@
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <mat-form-field>
+        <input
+        matInput
+        placeholder="Resposta"
+          type="text"
+          id="resposta"
+          required
+          [(ngModel)]="respostaPergunta.resposta"
+          name="resposta"
+        />
+      </mat-form-field>
+
+      <button (click)="saveRespostaPergunta()" class="btn btn-success">Submit</button>
+    </div>
+  </div>
+</div>

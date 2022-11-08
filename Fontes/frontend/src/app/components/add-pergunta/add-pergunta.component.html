@@ -1,0 +1,67 @@
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <mat-form-field>
+        <input
+        matInput
+        placeholder="Nome do Usuario"
+          type="text"
+          id="codigoPergunta"
+          required
+          [(ngModel)]="pergunta.codigoPergunta"
+          name="codigoPergunta"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+        matInput
+        placeholder="SequenciaFormulario"
+          type="text"
+          id="sequenciaFormulario"
+          required
+          [(ngModel)]="pergunta.sequenciaFormulario"
+          name="sequenciaFormulario"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+        matInput
+        placeholder="Frase"
+          type="text"
+          id="frase"
+          required
+          [(ngModel)]="pergunta.frase"
+          name="frase"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+        matInput
+        placeholder="TextoExplicativo"
+          type="text"
+          id="textoExplicativo"
+          required
+          [(ngModel)]="pergunta.textoExplicativo"
+          name="textoExplicativo"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+        matInput
+        placeholder="Obrigatoria"
+          type="text"
+          id="obrigatoria"
+          required
+          [(ngModel)]="pergunta.obrigatoria"
+          name="obrigatoria"
+        />
+      </mat-form-field>
+
+      <button (click)="savePergunta()" class="btn btn-success">Submit</button>
+    </div>
+  </div>
+</div>

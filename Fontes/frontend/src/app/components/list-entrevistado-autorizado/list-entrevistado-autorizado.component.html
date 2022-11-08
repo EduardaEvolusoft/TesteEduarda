@@ -1,0 +1,39 @@
+<div class="list row">
+    <div class="col-md-6">
+        <h4>Lista de EntrevistadosAutorizados</h4>
+        <ul class="list-group">
+        <li
+            class="list-group-item"
+            *ngFor="let entrevistadoAutorizado of entrevistadoAutorizadoCollection; let i = index"
+            [class.active]="i == currentIndex"
+            (click)="setActiveEntrevistadoAutorizado(entrevistadoAutorizado, i)"
+        >
+            {{ entrevistadoAutorizado.idUsuario }} {{ entrevistadoAutorizado.tipoPermissao }} 
+        </li>
+        </ul>
+
+        <button class="m-3 btn btn-sm btn-danger" (click)="removeAllEntrevistadosAutorizados()">
+        Remover Tudo
+        </button>
+    </div>
+    <div class="col-md-6">
+        <div *ngIf="currentEntrevistadoAutorizado.id">
+        <h4>EntrevistadoAutorizado</h4>
+        <div>
+            <label><strong>IdUsuario:</strong></label> {{ currentEntrevistadoAutorizado.idUsuario }}
+        </div>
+        <div>
+            <label><strong>TipoPermissao:</strong></label> {{ currentEntrevistadoAutorizado.tipoPermissao }}
+        </div>
+
+        <a class="badge badge-warning" routerLink="/entrevistados-autorizados/{{ currentEntrevistadoAutorizado.id }}">
+            Editar
+        </a>
+        </div>
+
+        <div *ngIf="!currentEntrevistadoAutorizado">
+        <br />
+        <p>Por favor selecione uma linha da lista de EntrevistadoAutorizado...</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+  <div>
+    <div *ngIf="entrevistadorAutorizado.id" class="edit-form">
+      <h4>EntrevistadorAutorizado</h4>
+      <form>
+      <div class="form-group">
+        <label for="idUsuario">IdUsuario</label>
+        <input
+          type="text"
+          class="form-control"
+          id="idUsuario"
+          required
+          [(ngModel)]="entrevistadorAutorizado.idUsuario"
+          name="idUsuario"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="tipoPermissao">TipoPermissao</label>
+        <input
+          type="text"
+          class="form-control"
+          id="tipoPermissao"
+          required
+          [(ngModel)]="entrevistadorAutorizado.tipoPermissao"
+          name="tipoPermissao"
+        />
+      </div>
+
+      </form>
+
+      <button class="badge badge-danger mr-2" (click)="deleteEntrevistadorAutorizado()">
+        Excluir
+      </button>
+
+      <button
+        type="submit"
+        class="badge badge-success mb-2"
+        (click)="updateEntrevistadorAutorizado()"
+      >
+        Gravar
+      </button>
+      <p>{{ message }}</p>
+    </div>
+
+    <div *ngIf="!entrevistadorAutorizado.id">
+      <br />
+      <p>Não foi possível carregar essa entidade de EntrevistadorAutorizado...</p>
+    </div>
+  </div>

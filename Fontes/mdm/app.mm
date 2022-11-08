@@ -1,0 +1,300 @@
+<map version="1.0.1">
+<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
+<node CREATED="1657460228606" ID="ID_634150733" MODIFIED="1667215641134" TEXT="testeEduarda">
+<node CREATED="1657547133760" ID="ID_673927625" MODIFIED="1657547135959" POSITION="right" TEXT="config">
+<node CREATED="1657622005294" ID="ID_6408575" LINK="mapperidea.mm" MODIFIED="1657622005296" TEXT="mapperidea"/>
+</node>
+<node CREATED="1657460278893" ID="ID_73324195" MODIFIED="1659912252658" POSITION="right" TEXT="domain">
+<icon BUILTIN="Package"/>
+<node CREATED="1661000810949" ID="ID_1269649493" MODIFIED="1667238931413" TEXT="controleAcesso">
+<icon BUILTIN="Package"/>
+<node CREATED="1661000844771" ID="ID_808550731" MODIFIED="1667328915126" TEXT="Usuario">
+<icon BUILTIN="Descriptor.bean"/>
+<node CREATED="1667216026472" ID="ID_48901007" MODIFIED="1667216029417" TEXT="@">
+<node CREATED="1667216030202" ID="ID_692712460" MODIFIED="1667216043864" TEXT="plural">
+<icon BUILTIN="element"/>
+<node CREATED="1667216045287" ID="ID_849011109" MODIFIED="1667216050035" TEXT="Usuarios">
+<icon BUILTIN="tag_green"/>
+</node>
+</node>
+<node CREATED="1657862917637" ID="ID_606803458" MODIFIED="1666291081585" TEXT="searchable">
+<icon BUILTIN="element"/>
+<node CREATED="1657862934723" ID="ID_899109862" MODIFIED="1657862945432" TEXT="nome">
+<icon BUILTIN="tag_green"/>
+</node>
+</node>
+</node>
+<node CREATED="1661109335811" ID="ID_28899985" MODIFIED="1661283823465" TEXT="atributos">
+<icon BUILTIN="Descriptor.grouping"/>
+<node CREATED="1661000950179" ID="ID_698525169" MODIFIED="1661962055308" TEXT="nome: Texto()">
+<icon BUILTIN="Mapping.directToField"/>
+<node CREATED="1638360960495" ID="ID_1757302742" MODIFIED="1638360961211" TEXT="@">
+<node CREATED="1638360963167" MODIFIED="1638360969829" TEXT="requerido">
+<icon BUILTIN="element"/>
+</node>
+</node>
+</node>
+<node CREATED="1661000958933" ID="ID_1936645641" MODIFIED="1661962071404" TEXT="senha: Texto()">
+<arrowlink DESTINATION="ID_1936645641" ENDARROW="Default" ENDINCLINATION="0;0;" ID="Arrow_ID_1709700833" STARTARROW="None" STARTINCLINATION="0;0;"/>
+<linktarget COLOR="#b0b0b0" DESTINATION="ID_1936645641" ENDARROW="Default" ENDINCLINATION="0;0;" ID="Arrow_ID_1709700833" SOURCE="ID_1936645641" STARTARROW="None" STARTINCLINATION="0;0;"/>
+<icon BUILTIN="Mapping.directToField"/>
+</node>
+<node CREATED="1661000965727" ID="ID_884555252" MODIFIED="1661109365171" TEXT="email: Texto()">
+<icon BUILTIN="Mapping.directToField"/>
+</node>
+<node CREATED="1661000981164" ID="ID_600077624" MODIFIED="1667328923550" TEXT="perfil: PerfilUsuario()">
+<icon BUILTIN="Mapping.oneToOne"/>
+</node>
+</node>
+</node>
+<node CREATED="1661000873975" ID="ID_1643252656" MODIFIED="1667333256482" TEXT="PerfilUsuario">
+<icon BUILTIN="Descriptor.bean"/>
+<node CREATED="1667216063562" ID="ID_445334992" MODIFIED="1667216134057" TEXT="@">
+<node CREATED="1667216071562" ID="ID_1391586437" MODIFIED="1667216079512" TEXT="plural">
+<icon BUILTIN="element"/>
+<node CREATED="1667216081255" ID="ID_388443057" MODIFIED="1667309196100" TEXT="PerfilsUsuarios">
+<icon BUILTIN="tag_green"/>
+</node>
+</node>
+</node>
+<node CREATED="1661109381881" ID="ID_1045976783" MODIFIED="1661283561600" TEXT="atributos">
+<icon BUILTIN="Descriptor.grouping"/>
+<node CREATED="1638360324867" ID="ID_1760502731" MODIFIED="1667485488125" TEXT="tipo: Texto(32)">
+<icon BUILTIN="Mapping.directToField"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1660999234649" ID="ID_35628823" MODIFIED="1667239138566" TEXT="configuracaoFormulario">
+<icon BUILTIN="Package"/>
+<node CREATED="1662300503643" ID="ID_1875125539" MODIFIED="1667485492289" TEXT="Pergunta">
+<icon BUILTIN="Descriptor.bean"/>
+<node CREATED="1667215933028" ID="ID_1810746585" MODIFIED="1667215965692" TEXT="@">
+<node CREATED="1667215937208" ID="ID_1039249278" MODIFIED="1667215940864" TEXT="plural">
+<icon BUILTIN="element"/>
+<node CREATED="1667215942794" ID="ID_54751518" MODIFIED="1667215948717" TEXT="Perguntas">
+<icon BUILTIN="tag_green"/>
+</node>
+</node>
+<node CREATED="1657862917637" ID="ID_322085548" MODIFIED="1666291081585" TEXT="searchable">
+<icon BUILTIN="element"/>
+<node CREATED="1657862934723" ID="ID_953030421" MODIFIED="1667238684102" TEXT="codigoPergunta">
+<icon BUILTIN="tag_green"/>
+</node>
+</node>
+</node>
+<node CREATED="1657481387958" ID="ID_1842269374" MODIFIED="1667238669978" TEXT="atributos">
+<icon BUILTIN="Descriptor.grouping"/>
+<node CREATED="1657662112999" ID="ID_1493618604" MODIFIED="1667485496694" TEXT="codigoPergunta: Numero()">
+<icon BUILTIN="Mapping.directToField"/>
+</node>
+<node CREATED="1660999116281" ID="ID_242304867" MODIFIED="1661108764668" TEXT="sequenciaFormulario: Numero()">
+<icon BUILTIN="Mapping.directToField"/>
+</node>
+<node CREATED="1657481324660" ID="ID_1093330262" MODIFIED="1660945332821" TEXT="frase: Texto()">
+<icon BUILTIN="Mapping.directToField"/>
+<node CREATED="1657659578235" ID="ID_478858478" MODIFIED="1667501841183" TEXT="@">
+<node CREATED="1657468950958" ID="ID_1875505975" MODIFIED="1657659566977" TEXT="requerido">
+<icon BUILTIN="element"/>
+</node>
+</node>
+</node>
+<node CREATED="1660656523611" ID="ID_1235763558" MODIFIED="1660999107846" TEXT="textoExplicativo: Texto()">
+<icon BUILTIN="Mapping.directToField"/>
+</node>
+<node CREATED="1660997256964" ID="ID_1697525074" MODIFIED="1660999066236" TEXT="tipoResposta: TipoResposta()">
+<icon BUILTIN="Mapping.oneToOne"/>
+</node>
+<node CREATED="1660656542757" ID="ID_1081433286" MODIFIED="1661000008379" TEXT="obrigatoria: Boolean()">
+<icon BUILTIN="Mapping.directToField"/>
+</node>
+</node>
+</node>
+<node CREATED="1662388711542" ID="ID_644323792" MODIFIED="1667314293498" TEXT="Enquete">
+<arrowlink DESTINATION="ID_644323792" ENDARROW="Default" ENDINCLINATION="0;0;" ID="Arrow_ID_1505314448" STARTARROW="None" STARTINCLINATION="0;0;"/>
+<linktarget COLOR="#b0b0b0" DESTINATION="ID_644323792" ENDARROW="Default" ENDINCLINATION="0;0;" ID="Arrow_ID_1505314448" SOURCE="ID_644323792" STARTARROW="None" STARTINCLINATION="0;0;"/>
+<icon BUILTIN="Descriptor.bean"/>
+<node CREATED="1667216346275" ID="ID_869668238" MODIFIED="1667216357242" TEXT="@">
+<node CREATED="1667216348555" ID="ID_501617549" MODIFIED="1667216351063" TEXT="plural">
+<icon BUILTIN="element"/>
+<node CREATED="1667216352267" ID="ID_1233925204" MODIFIED="1667216354930" TEXT="Enquetes">
+<icon BUILTIN="tag_green"/>
+</node>
+</node>
+<node CREATED="1657862917637" ID="ID_188253457" MODIFIED="1667238693937" TEXT="searchable">
+<icon BUILTIN="element"/>
+<node CREATED="1657862934723" ID="ID_796471982" MODIFIED="1657862945432" TEXT="nome">
+<icon BUILTIN="tag_green"/>
+</node>
+</node>
+</node>
+<node CREATED="1660999348217" ID="ID_900086123" MODIFIED="1667485476298" TEXT="atributos">
+<icon BUILTIN="Descriptor.grouping"/>
+<node CREATED="1660999401616" ID="ID_1869948952" MODIFIED="1667314302938" TEXT="nome: Texto()">
+<icon BUILTIN="Mapping.directToField"/>
+</node>
+<node CREATED="1660999413473" ID="ID_1914304104" MODIFIED="1661109286510" TEXT="ativa: Boolean()">
+<icon BUILTIN="Mapping.directToField"/>
+</node>
+<node CREATED="1660999433304" ID="ID_813188881" MODIFIED="1667314327806" TEXT="dataHoraInicio: Data()">
+<icon BUILTIN="Mapping.directToField"/>
+</node>
+<node CREATED="1660999449315" ID="ID_1242699409" MODIFIED="1667314330391" TEXT="dataHoraFinal: Data()">
+<icon BUILTIN="Mapping.directToField"/>
+</node>
+<node CREATED="1660999518485" ID="ID_1970165916" MODIFIED="1667216587237" TEXT="pergunta: Pergunta()">
+<icon BUILTIN="Mapping.oneToOne"/>
+</node>
+<node CREATED="1661001349895" ID="ID_907048276" MODIFIED="1667216314201" TEXT="entrevistadorInsereResposta: Boolean()">
+<icon BUILTIN="Mapping.directToField"/>
+</node>
+<node CREATED="1661001431808" ID="ID_498275640" MODIFIED="1667216314201" TEXT="entrevistadoInsereResposta: Boolean()">
+<icon BUILTIN="Mapping.directToField"/>
+</node>
+<node CREATED="1661001457332" ID="ID_1051659068" MODIFIED="1667216328562" TEXT="entrevistadorAutorizado: EntrevistadorAutorizado()">
+<icon BUILTIN="Mapping.oneToOne"/>
+</node>
+<node CREATED="1661001558239" ID="ID_477590261" MODIFIED="1667216337321" TEXT="entrevistadoAutorizado: EntrevistadoAutorizado()">
+<icon BUILTIN="Mapping.oneToOne"/>
+</node>
+</node>
+</node>
+<node CREATED="1661549454061" FOLDED="true" ID="ID_1854600437" MODIFIED="1667501752062" TEXT="EntrevistadorAutorizado">
+<icon BUILTIN="Descriptor.bean"/>
+<node CREATED="1667216175468" ID="ID_1800631532" MODIFIED="1667216179038" TEXT="@">
+<node CREATED="1667216180542" FOLDED="true" ID="ID_1958383895" MODIFIED="1667242034591" TEXT="plural">
+<icon BUILTIN="element"/>
+<node CREATED="1667216186578" ID="ID_1975394188" MODIFIED="1667216197186" TEXT="EntrevistadoresAutorizados">
+<icon BUILTIN="tag_green"/>
+</node>
+</node>
+</node>
+<node CREATED="1661549964066" ID="ID_67705009" MODIFIED="1667485474458" TEXT="atributos">
+<icon BUILTIN="Descriptor.grouping"/>
+<node CREATED="1661549524291" ID="ID_261556717" MODIFIED="1667216270200" TEXT="idUsuario: Usuario()">
+<icon BUILTIN="Mapping.oneToOne"/>
+</node>
+<node CREATED="1661549734714" ID="ID_1981554658" MODIFIED="1667216562633" TEXT="tipoPermissao: Texto()">
+<icon BUILTIN="Mapping.directToField"/>
+</node>
+</node>
+</node>
+<node CREATED="1661549468308" FOLDED="true" ID="ID_1172151231" MODIFIED="1667501751254" TEXT="EntrevistadoAutorizado">
+<icon BUILTIN="Descriptor.bean"/>
+<node CREATED="1667216227934" ID="ID_1914010864" MODIFIED="1667216243034" TEXT="@">
+<node CREATED="1667216231872" ID="ID_699436800" MODIFIED="1667216235429" TEXT="plural">
+<icon BUILTIN="element"/>
+<node CREATED="1667216236821" ID="ID_1337487099" MODIFIED="1667216240168" TEXT="EntrevistadosAutorizados">
+<icon BUILTIN="tag_green"/>
+</node>
+</node>
+</node>
+<node CREATED="1661549964066" ID="ID_1046162835" MODIFIED="1667485473130" TEXT="atributos">
+<icon BUILTIN="Descriptor.grouping"/>
+<node CREATED="1661549524291" ID="ID_635275445" MODIFIED="1667216276281" TEXT="idUsuario: Usuario()">
+<icon BUILTIN="Mapping.oneToOne"/>
+</node>
+<node CREATED="1661549734714" ID="ID_1018805503" MODIFIED="1667216562633" TEXT="tipoPermissao: Texto()">
+<icon BUILTIN="Mapping.directToField"/>
+</node>
+</node>
+</node>
+<node CREATED="1660997728577" FOLDED="true" ID="ID_685266480" MODIFIED="1667501750446" TEXT="TipoResposta">
+<icon BUILTIN="Descriptor.bean"/>
+<node CREATED="1667216401495" ID="ID_1510123033" MODIFIED="1667216403675" TEXT="@">
+<node CREATED="1667216405053" ID="ID_27748616" MODIFIED="1667216407364" TEXT="plural">
+<icon BUILTIN="element"/>
+<node CREATED="1667216408888" ID="ID_505489489" MODIFIED="1667216416069" TEXT="TiposRespostas">
+<icon BUILTIN="tag_green"/>
+</node>
+</node>
+</node>
+<node CREATED="1661109226682" ID="ID_1629838133" MODIFIED="1661109234905" TEXT="atributos">
+<icon BUILTIN="Descriptor.grouping"/>
+<node CREATED="1638360324867" ID="ID_646048255" MODIFIED="1667485468642" TEXT="nome: Texto(32)">
+<icon BUILTIN="Mapping.directToField"/>
+</node>
+</node>
+</node>
+<node CREATED="1660999658011" FOLDED="true" ID="ID_597183507" MODIFIED="1667501749471" TEXT="Entrevista">
+<icon BUILTIN="Descriptor.bean"/>
+<node CREATED="1667216449321" ID="ID_1430373409" MODIFIED="1667216464823" TEXT="@">
+<node CREATED="1667216452931" ID="ID_702425545" MODIFIED="1667216456454" TEXT="plural">
+<icon BUILTIN="element"/>
+<node CREATED="1667216458197" ID="ID_912440166" MODIFIED="1667216462373" TEXT="Entrevistas">
+<icon BUILTIN="tag_green"/>
+</node>
+</node>
+</node>
+<node CREATED="1661108852240" ID="ID_1259604342" MODIFIED="1667485479508" TEXT="atributos">
+<icon BUILTIN="Descriptor.grouping"/>
+<node CREATED="1660999854821" ID="ID_1052323580" MODIFIED="1667242141182" TEXT="nome: Texto()">
+<icon BUILTIN="Mapping.directToField"/>
+</node>
+<node CREATED="1660999857451" ID="ID_97588459" MODIFIED="1667314996855" TEXT="dataHora: Data()">
+<icon BUILTIN="Mapping.directToField"/>
+</node>
+<node CREATED="1661000156150" ID="ID_1013032199" MODIFIED="1661109136189" TEXT="sequencia: Numero()">
+<icon BUILTIN="Mapping.directToField"/>
+</node>
+<node CREATED="1661000216107" ID="ID_645828906" MODIFIED="1661549329129" TEXT="entrevistador: Usuario()">
+<icon BUILTIN="Mapping.oneToOne"/>
+</node>
+<node CREATED="1661001714745" ID="ID_164017651" MODIFIED="1661109149604" TEXT="entrevistado: Usuario()">
+<icon BUILTIN="Mapping.oneToOne"/>
+</node>
+<node CREATED="1661000118361" ID="ID_650759318" MODIFIED="1667216477084" TEXT="enquete: Enquete()">
+<icon BUILTIN="Mapping.oneToOne"/>
+</node>
+<node CREATED="1660999883043" ID="ID_1311647281" MODIFIED="1667216491404" TEXT="resposta: RespostaPergunta()">
+<icon BUILTIN="Mapping.oneToOne"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1660999597222" ID="ID_125931418" MODIFIED="1667239354360" TEXT="registrosDados">
+<icon BUILTIN="Package"/>
+<node CREATED="1660999666667" ID="ID_905944891" MODIFIED="1667485481299" TEXT="RespostaPergunta">
+<icon BUILTIN="Descriptor.bean"/>
+<node CREATED="1667216510131" ID="ID_1629973863" MODIFIED="1667216526064" TEXT="@">
+<node CREATED="1667216512335" ID="ID_807554342" MODIFIED="1667216514464" TEXT="plural">
+<icon BUILTIN="element"/>
+<node CREATED="1667216516334" ID="ID_1473857902" MODIFIED="1667216524037" TEXT="RespostasPerguntas">
+<icon BUILTIN="tag_green"/>
+</node>
+</node>
+</node>
+<node CREATED="1661108894863" ID="ID_1312432550" MODIFIED="1661108912706" TEXT="atributos">
+<icon BUILTIN="Descriptor.grouping"/>
+<node CREATED="1660999766939" ID="ID_154030919" MODIFIED="1667242714628" TEXT="resposta: Texto()">
+<icon BUILTIN="Mapping.directToField"/>
+</node>
+<node CREATED="1660999736547" ID="ID_860771060" MODIFIED="1667216536551" TEXT="pergunta: Pergunta()">
+<icon BUILTIN="Mapping.oneToOne"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1658082382585" ID="ID_822901468" LINK="window.mm" MODIFIED="1667215548582" POSITION="right" TEXT="window">
+<icon BUILTIN="Package"/>
+<node CREATED="1665861251724" ID="ID_887788670" MODIFIED="1665861257450" TEXT="@">
+<node CREATED="1665861258863" ID="ID_178988103" MODIFIED="1665861264460" TEXT="rootMenu">
+<icon BUILTIN="element"/>
+</node>
+<node CREATED="1666035316386" ID="ID_845110931" MODIFIED="1666123424252" TEXT="tituloProj">
+<icon BUILTIN="element"/>
+<node CREATED="1666035324072" ID="ID_1983641467" MODIFIED="1667216690045" TEXT="TesteEduarda">
+<icon BUILTIN="tag_green"/>
+</node>
+</node>
+<node CREATED="1667222278096" ID="ID_1946616263" MODIFIED="1667222286916" TEXT="caminhoProjeto">
+<icon BUILTIN="element"/>
+<node CREATED="1667222288527" ID="ID_914463976" MODIFIED="1667222307107" TEXT="C:\projetos\testeEduarda">
+<icon BUILTIN="tag_green"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</map>

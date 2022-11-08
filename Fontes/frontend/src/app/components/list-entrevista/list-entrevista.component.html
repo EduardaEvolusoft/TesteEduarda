@@ -1,0 +1,54 @@
+<div class="list row">
+    <div class="col-md-6">
+        <h4>Lista de Entrevistas</h4>
+        <ul class="list-group">
+        <li
+            class="list-group-item"
+            *ngFor="let entrevista of entrevistaCollection; let i = index"
+            [class.active]="i == currentIndex"
+            (click)="setActiveEntrevista(entrevista, i)"
+        >
+            {{ entrevista.nome }} {{ entrevista.dataHora }} {{ entrevista.sequencia }} {{ entrevista.entrevistador }} {{ entrevista.entrevistado }} {{ entrevista.enquete }} {{ entrevista.resposta }} 
+        </li>
+        </ul>
+
+        <button class="m-3 btn btn-sm btn-danger" (click)="removeAllEntrevistas()">
+        Remover Tudo
+        </button>
+    </div>
+    <div class="col-md-6">
+        <div *ngIf="currentEntrevista.id">
+        <h4>Entrevista</h4>
+        <div>
+            <label><strong>Nome:</strong></label> {{ currentEntrevista.nome }}
+        </div>
+        <div>
+            <label><strong>DataHora:</strong></label> {{ currentEntrevista.dataHora }}
+        </div>
+        <div>
+            <label><strong>Sequencia:</strong></label> {{ currentEntrevista.sequencia }}
+        </div>
+        <div>
+            <label><strong>Entrevistador:</strong></label> {{ currentEntrevista.entrevistador }}
+        </div>
+        <div>
+            <label><strong>Entrevistado:</strong></label> {{ currentEntrevista.entrevistado }}
+        </div>
+        <div>
+            <label><strong>Enquete:</strong></label> {{ currentEntrevista.enquete }}
+        </div>
+        <div>
+            <label><strong>Resposta:</strong></label> {{ currentEntrevista.resposta }}
+        </div>
+
+        <a class="badge badge-warning" routerLink="/entrevistas/{{ currentEntrevista.id }}">
+            Editar
+        </a>
+        </div>
+
+        <div *ngIf="!currentEntrevista">
+        <br />
+        <p>Por favor selecione uma linha da lista de Entrevista...</p>
+        </div>
+    </div>
+</div>
